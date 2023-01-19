@@ -1,0 +1,35 @@
+Exercise: 1) What is the method signature (return type, method name, and parameters) of the last function in this blob?
+Ans. int cmd_worktree(int ac, const char **av, const char *prefix)
+
+Exercise: 2) What is the latest version of the release notes (RelNotes....txt) for the git repository?
+Ans. 2.31
+
+Exercise: 3) What is the output of git cat-file -p 83484f | tail -4 | head -1? Briefly explain what this command does.
+Ans. git cat-file -p 83484f prints the contents of the object with the SHA-1 83484f. The output is piped to tail -4 to print the last 4 lines of the output.
+The output is then piped to head -1 to print the first line of the output. The output is the blob with filename "tutorial.txt".
+
+Exercise: 5) What is the commit message submitted with this commit?
+Ans. l10n: de.po: Update German translation for Git v2.31.0
+
+Exercise: 6) Write a bash command(s) to search the commit graph for commits that mention the word "refactored". Then, run the command and add the output (answer should include command and output).
+Ans.
+    ~/Documents/git  on   master ⇣6740 ?1                                                                                                                                  PIPE ✘  base   at 17:42:07 
+╰─ PAGER='head -n 80' git log --graph --oneline | grep "refactored"
+| * | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | 94bcad7979 sequencer: change complete_action() to use the refactored functions
+| * | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | bbfe5302d5 implement test_might_fail using a refactored test_must_fail
+* | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | c18f75a1e9 send-email: add tests for refactored prompting
+
+Exercise: 7) What is the name of the first file listed that changed between versions 2.31.0 and 2.31.1?
+Ans. Documentation/RelNotes/2.31.1.txt
+
+Exercise: 8) Provide a list of all the branches for the git repository.
+Ans.
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/jch
+  remotes/origin/main
+  remotes/origin/maint
+  remotes/origin/master
+  remotes/origin/next
+  remotes/origin/seen
+  remotes/origin/todo
